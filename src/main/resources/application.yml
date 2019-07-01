@@ -1,0 +1,17 @@
+server:
+  port: 50355
+
+spring:
+  data:
+    rest:
+      base-path: /resources
+      default-page-size: 5
+  datasource:
+    hikari:
+      jdbc-url: jdbc:postgresql://localhost:5432/jdbc
+      driver-class-name: org.postgresql.Driver
+      username: hillium
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create
