@@ -2,6 +2,9 @@
 这是一个简单的身份验证服务。  
 
 ## 使用
+首先配置 Postgresql。
+参见 `application.yml`。
+如果要在生产环境使用，请配置 `hibernate.auto-ddl`至`update`；否则每次退出的时候都会删除数据库。
 ```bash
 # 使用 gradle 的 Spring boot 插件直接运行。
 ./gradlew bootRun
@@ -10,6 +13,7 @@
 ./gradlew build
 java -jar ./build/libs/<???>.jar
 ```
+启动之后，可以使用 `init.sh` 初始化 Admin 用户。
 
 ## 注意
 它直接暴露了一些 RESTful API（关于实体管理的），
